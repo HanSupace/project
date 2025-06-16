@@ -20,16 +20,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build release distributions
+      - name: Install build tool
         run: |
           python -m pip install --upgrade pip build
-          python -m build project/textminer_pro 
+
+      - name: Build release distributions
+        run: |
+          cd textminer_pro            
+          python -m build .            
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
         with:
           name: release-dists
-          path: project/textminer_pro/dist/  
+          path: textminer_pro/dist/   
 
   pypi-publish:
     runs-on: ubuntu-latest
