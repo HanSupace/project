@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="textminer-pro001",  
-    version="0.2.6",
+    version="0.2.8",
     author="최수한",
     author_email="wagkster@naver.com",
     description="불용어 제거, 키워드 추출, 요약, 언어 감지를 제공하는 텍스트 분석 도구",
