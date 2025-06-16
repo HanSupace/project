@@ -21,16 +21,15 @@ jobs:
           python-version: "3.x"
 
       - name: Build release distributions
-        working-directory: project/textminer_pro  # ✅ setup.py 위치 정확히 지정
         run: |
           python -m pip install --upgrade pip build
-          python -m build
+          python -m build project/textminer_pro 
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
         with:
           name: release-dists
-          path: project/textminer_pro/dist/  # ✅ 빌드 결과물 위치도 정확히 지정
+          path: project/textminer_pro/dist/  
 
   pypi-publish:
     runs-on: ubuntu-latest
