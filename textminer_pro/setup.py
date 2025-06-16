@@ -8,7 +8,7 @@ setup(
     description="불용어 제거, 키워드 추출, 요약, 언어 감지를 제공하는 텍스트 분석 도구",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/project/Hansupace/textminer-pro",
+    url="https://github.com/HanSupace/project/tree/main/project/textminer_pro",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
